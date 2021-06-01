@@ -8,7 +8,7 @@ function clean() {
 }
 
 function styles(){
-    return src("scss/style.scss").pipe(sass().on("error", sass.logError)).pipe(dest("dist/assets/css"));
+    return src("scss/style.scss").pipe(sass()).pipe(dest("dist/assets/css"));
 }
 
 function js(){
@@ -16,7 +16,11 @@ function js(){
 }
 
 function images(){
-    return src("img/**").pipe(dest("dist/assets/img"));
+    return src(["img/**"]).pipe(dest("dist/assets/img"));
+}
+
+function icons(){
+    return src(["node_modules/bootstrap-icons/icons/linkedin.svg", "node_modules/bootstrap-icons/icons/envelope.svg", "node_modules/bootstrap-icons/icons/github.svg"]).pipe(dest("dist/assets/img/icons"));
 }
 
 function copy(){
@@ -31,7 +35,7 @@ function copyToServer(){
     return src("dist/**").pipe(dest("/var/www/html/resume"));
 }
 
-const build = series(clean, parallel(styles, js, images, copy));
+const build = series(clean, parallel(styles, js, images, icons, copy));
 
 const deploy = series(build, clean_deploy_dest, copyToServer);
 
