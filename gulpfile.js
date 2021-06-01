@@ -20,7 +20,7 @@ function images(){
 }
 
 function copy(){
-    return src("index.html").pipe(dest("dist"));
+    return src(["index.html"]).pipe(dest("dist"));
 }
 
 function clean_deploy_dest(){
