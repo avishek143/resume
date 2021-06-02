@@ -12,7 +12,7 @@ function styles(){
 }
 
 function js(){
-    return src("node_modules/bootstrap/dist/js/bootstrap.bundle.js").pipe(dest("dist/assets/js"));
+    return src(["node_modules/bootstrap/dist/js/bootstrap.bundle.js","node_modules/chart.js/dist/chart.js","js/**"]).pipe(dest("dist/assets/js"));
 }
 
 function images(){
@@ -43,5 +43,5 @@ exports.clean = clean;
 exports.build = build;
 exports.deploy = deploy;
 exports.default = function() {
-    watch(["index.html", "img/**", "scss/**"], deploy);
+    watch(["index.html", "img/**", "scss/**","js/**","gulpfile.js"], deploy);
 }
