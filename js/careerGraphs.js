@@ -1,62 +1,76 @@
-// <block:setup:1>
-const labels = ["January", "February", "March", "April", "May", "June"];
-const data1 = {
-  labels: labels,
+const techData = {
+  labels: [
+    "Node.js",
+    "Full Stack",
+    "Javascript",
+    "HTML & CSS",
+    "Java",
+    "Cloud",
+    "AWS",
+    "MongoDB",
+  ],
   datasets: [
     {
-      label: "My First dataset",
-      backgroundColor: "rgb(255, 99, 132)",
-      borderColor: "rgb(255, 99, 132)",
-      data: [0, 10, 5, 2, 20, 30, 45],
+      label: "something",
+      data: [8, 8, 17, 17, 6, 8, 8, 8],
     },
   ],
 };
 
-const data2 = {
-    labels: labels,
-    datasets: [
-      {
-        label: "My First dataset",
-        backgroundColor: "rgb(255, 99, 132)",
-        borderColor: "rgb(255, 99, 132)",
-        data: [0, 10, 5, 2, 20, 30, 45],
-      },
-    ],
-  };
+const techConfig = {
+  type: "bar",
+  data: techData,
+  options: {
+    indexAxis: "y",
+  },
+};
 
-  const data3 = {
-    labels: labels,
-    datasets: [
-      {
-        label: "My First dataset",
-        backgroundColor: "rgb(255, 99, 132)",
-        borderColor: "rgb(255, 99, 132)",
-        data: [0, 10, 5, 2, 20, 30, 45],
-      },
-    ],
-  };
-// </block:setup>
+const rolesData = {
+  labels: [
+    "Coding",
+    "Software Architecture",
+    "Team Management",
+    "Scrum Mastery",
+    "Product Management",
+  ],
+  datasets: [
+    {
+      label: "roles something",
+      data: [17, 9, 5, 8, 2],
+    },
+  ],
+};
 
-// <block:config:0>
-const config1 = {
-  type: "line",
-  data: data1,
+const rolesConfig = {
+  type: "bar",
+  data: rolesData,
   options: {},
 };
-const config2 = {
-  type: "line",
-  data: data2,
+
+const companiesData = {
+  labels: ["Wipro", "Pegasystems", "TailTrails"],
+  datasets: [
+    {
+      label: "something company",
+      data: [5, 10, 2],
+    },
+  ],
+};
+
+const companiesConfig = {
+  type: "pie",
+  data: companiesData,
   options: {},
 };
-const config3 = {
-  type: "line",
-  data: data3,
-  options: {},
-};
-// </block:config>
 
-var myTechnicalChart = new Chart(document.getElementById("technical"), config1);
+var myTechnologyChart = new Chart(
+  document.getElementById("technical"),
+  techConfig
+);
 
-var myRolesChart = new Chart(document.getElementById("roles"), config2);
+var myRolesChart = new Chart(document.getElementById("roles"), rolesConfig);
 
-var myCompaniesChart = new Chart(document.getElementById("companies"), config3);
+var myCompaniesChart = new Chart(
+  document.getElementById("companies"),
+  companiesConfig
+);
