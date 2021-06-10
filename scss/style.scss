@@ -49,7 +49,7 @@
     margin-block-end: 0;
 }
 
-.site-header {
+.odd-section {
     background-color: #ECEFF1;
 }
 
@@ -57,7 +57,7 @@
     width: 1.5em;
 }
 
-.career-summary {
+.even-section {
     background-color: #CFD8DC;
 }
 
@@ -75,4 +75,9 @@
 
 .footer {
     background-color: #263238;
+}
+
+.chart-container {
+    position: relative;
+    height: 80vh;    
 }

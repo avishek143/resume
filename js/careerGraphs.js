@@ -11,7 +11,7 @@ const techData = {
   ],
   datasets: [
     {
-      label: "something",
+      label: "Years of Experience",
       data: [8, 8, 17, 17, 6, 8, 8, 8],
     },
   ],
@@ -22,6 +22,17 @@ const techConfig = {
   data: techData,
   options: {
     indexAxis: "y",
+    maintainAspectRatio: false,
+    plugins: {
+      legend: {
+        display: false,
+      },
+    },
+    scales: {
+      x: {
+        title: { text: "Years of Experience", display: true },
+      },
+    },
   },
 };
 
@@ -47,30 +58,9 @@ const rolesConfig = {
   options: {},
 };
 
-const companiesData = {
-  labels: ["Wipro", "Pegasystems", "TailTrails"],
-  datasets: [
-    {
-      label: "something company",
-      data: [5, 10, 2],
-    },
-  ],
-};
-
-const companiesConfig = {
-  type: "pie",
-  data: companiesData,
-  options: {},
-};
-
 var myTechnologyChart = new Chart(
-  document.getElementById("technical"),
+  document.getElementById("tech-graph"),
   techConfig
 );
 
-var myRolesChart = new Chart(document.getElementById("roles"), rolesConfig);
-
-var myCompaniesChart = new Chart(
-  document.getElementById("companies"),
-  companiesConfig
-);
+//var myRolesChart = new Chart(document.getElementById("roles"), rolesConfig);
