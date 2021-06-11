@@ -76,5 +76,12 @@ body {
 
 .chart-container {
   position: relative;
-  height: 100vh;
+  height: 90vh;
+}
+
+@include media-breakpoint-down(lg){
+    .chart-container {
+        position: relative;
+        height: 100vh;
+      }
 }
