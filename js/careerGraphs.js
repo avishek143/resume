@@ -1,6 +1,8 @@
 const techData = {
   labels: [
-    "HTML & CSS",
+    "HTML",
+    "CSS",
+    "Sass",
     "Javascript",
     "Typescript",
     "Node.js",
@@ -24,7 +26,33 @@ const techData = {
   datasets: [
     {
       label: "Years of Experience",
-      data: [17, 17, 4, 8, 7, 5, 7, 6, 5, 4, 3, 5, 3, 7, 3, 8, 8, 5, 2, 2],
+      data: [
+        17, 17, 8, 17, 4, 8, 7, 5, 7, 6, 5, 4, 3, 5, 3, 7, 3, 8, 8, 5, 2, 2,
+      ],
+      backgroundColor: [
+        "#DD4B25",
+        "#254BDD",
+        "#CF649A",
+        "#EFD81D",
+        "#2F74C0",
+        "#3F873E",
+        "#000000",
+        "#EFD81D",
+        "#61DAFB",
+        "#7952B3",
+        "#D72B21",
+        "#12924F",
+        "#336791",
+        "#2391E6",
+        "#3069DE",
+        "#D34446",
+        "#75AFCC",
+        "#F64D27",
+        "#EC912D",
+        "#01607E",
+        "#8892BF",
+        "#0073AA",
+      ],
     },
   ],
 };
@@ -45,7 +73,7 @@ const techConfig = {
         title: { text: "Years of Experience", display: true },
       },
     },
-  },
+  }
 };
 
 const rolesData = {
@@ -70,6 +98,8 @@ const rolesConfig = {
   options: {},
 };
 
+Chart.defaults.font.size = 14;
+Chart.defaults.font.weight = "bold";
 var myTechnologyChart = new Chart(
   document.getElementById("tech-graph"),
   techConfig
