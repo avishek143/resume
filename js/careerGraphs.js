@@ -73,21 +73,36 @@ const techConfig = {
         title: { text: "Years of Experience", display: true },
       },
     },
-  }
+  },
 };
 
 const rolesData = {
   labels: [
     "Coding",
-    "Software Architecture",
-    "Team Management",
+    "Architecture",
     "Scrum Mastery",
+    "Dev Management",
     "Product Management",
   ],
   datasets: [
     {
-      label: "roles something",
-      data: [17, 9, 5, 8, 2],
+      label: "Years of Experience",
+      data: [17, 13, 7, 6, 2],
+      backgroundColor: [
+        "rgba(255, 99, 132, 0.2)",
+        "rgba(255, 159, 64, 0.2)",
+        "rgba(153, 102, 255, 0.2)",
+        "rgba(75, 192, 192, 0.2)",
+        "rgba(54, 162, 235, 0.2)",
+      ],
+      borderColor: [
+        "rgb(255, 99, 132)",
+        "rgb(255, 159, 64)",
+        "rgb(153, 102, 255)",
+        "rgb(75, 192, 192)",
+        "rgb(54, 162, 235)",
+      ],
+      borderWidth: 1,
     },
   ],
 };
@@ -95,14 +110,30 @@ const rolesData = {
 const rolesConfig = {
   type: "bar",
   data: rolesData,
-  options: {},
+  options: {
+    maintainAspectRatio: false,
+    plugins: {
+      legend: {
+        display: false,
+      },
+    },
+    scales: {
+      y: {
+        title: { text: "Years", display: true },
+      },
+    },
+  },
 };
 
 Chart.defaults.font.size = 14;
 Chart.defaults.font.weight = "bold";
-var myTechnologyChart = new Chart(
+
+let myTechnologyChart = new Chart(
   document.getElementById("tech-graph"),
   techConfig
 );
 
-//var myRolesChart = new Chart(document.getElementById("roles"), rolesConfig);
+let myRolesChart = new Chart(
+  document.getElementById("roles-graph"),
+  rolesConfig
+);
