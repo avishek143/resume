@@ -27,7 +27,7 @@ const techData = {
     {
       label: "Years of Experience",
       data: [
-        17, 17, 8, 17, 4, 8, 7, 5, 7, 6, 5, 4, 3, 5, 3, 7, 3, 8, 8, 5, 2, 2,
+        17, 17, 10, 17, 4, 8, 7, 5, 7, 6, 5, 4, 3, 5, 3, 7, 3, 8, 8, 5, 2, 2,
       ],
       backgroundColor: [
         "#DD4B25",
@@ -87,7 +87,7 @@ const rolesData = {
   datasets: [
     {
       label: "Years of Experience",
-      data: [17, 13, 7, 6, 2],
+      data: [17, 13, 9, 7, 3],
       backgroundColor: [
         "rgba(255, 99, 132, 0.2)",
         "rgba(255, 159, 64, 0.2)",
