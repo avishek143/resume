@@ -1,3 +1,5 @@
+const Chart = require('chart.js');
+
 const techData = {
   labels: [
     "HTML",
